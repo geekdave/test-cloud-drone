@@ -43,4 +43,97 @@ trigger:
 kind: pipeline
 name: phase4
 
+steps:
+- name: build
+  image: lorel/docker-stress-ng
+  commands:
+  - stress-ng --cpu 2 --timeout 30s --metrics-brief
 
+trigger:
+  event:
+  - push
+  
+---
+kind: pipeline
+name: phase5
+
+steps:
+- name: build
+  image: lorel/docker-stress-ng
+  commands:
+  - stress-ng --cpu 2 --timeout 30s --metrics-brief
+
+trigger:
+  event:
+  - push  
+  
+---
+kind: pipeline
+name: phase6
+
+steps:
+- name: build
+  image: lorel/docker-stress-ng
+  commands:
+  - stress-ng --cpu 2 --timeout 30s --metrics-brief
+
+trigger:
+  event:
+  - push  
+  
+---
+kind: pipeline
+name: phase7
+
+steps:
+- name: build
+  image: lorel/docker-stress-ng
+  commands:
+  - stress-ng --cpu 2 --timeout 30s --metrics-brief
+
+trigger:
+  event:
+  - push  
+  
+---
+kind: pipeline
+name: phase8
+
+steps:
+- name: build
+  image: lorel/docker-stress-ng
+  commands:
+  - stress-ng --cpu 2 --timeout 30s --metrics-brief
+
+trigger:
+  event:
+  - push  
+
+---
+kind: pipeline
+name: phase9
+
+steps:
+- name: build
+  image: lorel/docker-stress-ng
+  commands:
+  - stress-ng --cpu 2 --timeout 30s --metrics-brief
+
+trigger:
+  event:
+  - push  
+  
+---
+kind: pipeline
+name: phase10
+
+steps:
+- name: build
+  image: lorel/docker-stress-ng
+  commands:
+  - stress-ng --cpu 2 --timeout 30s --metrics-brief
+
+trigger:
+  event:
+  - push  
+  
