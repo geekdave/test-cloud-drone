@@ -1,0 +1,46 @@
+kind: pipeline
+name: phase1
+
+steps:
+- name: build
+  image: lorel/docker-stress-ng
+  commands:
+  - stress-ng --cpu 2 --timeout 30s --metrics-brief
+
+trigger:
+  event:
+  - push
+
+---
+kind: pipeline
+name: phase2
+
+steps:
+- name: build
+  image: lorel/docker-stress-ng
+  commands:
+  - stress-ng --cpu 2 --timeout 30s --metrics-brief
+
+trigger:
+  event:
+  - push
+
+---
+kind: pipeline
+name: phase3
+
+steps:
+- name: build
+  image: lorel/docker-stress-ng
+  commands:
+  - stress-ng --cpu 2 --timeout 30s --metrics-brief
+
+trigger:
+  event:
+  - push
+
+---
+kind: pipeline
+name: phase4
+
+
